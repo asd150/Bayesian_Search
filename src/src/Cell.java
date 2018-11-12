@@ -6,6 +6,29 @@ public class Cell {
     private int column;
     private boolean isTarget;
     private double falseNegative;
+    private int timeSearched;
+    private double pFindingTarget;
+
+
+    public double getpFindingTarget() {
+        return pFindingTarget;
+    }
+
+    public void setpFindingTarget(double pFindingTarget) {
+        this.pFindingTarget = pFindingTarget;
+    }
+
+    public Cell(){
+        this.priorBelief = 0;
+        this.terrian = '0';
+        this.isTarget = false;
+        this.falseNegative =0;
+        this.timeSearched = 0;
+        this.pFindingTarget = 0;
+
+
+    }
+
 
     public boolean isTarget() {
         return isTarget;
@@ -23,14 +46,14 @@ public class Cell {
         this.falseNegative = falseNegative;
     }
 
-    public Cell(){
-        this.priorBelief = 0;
-        this.terrian = '0';
-        this.isTarget = false;
-        this.falseNegative =0;
-
-
+    public int getTimeSearched() {
+        return timeSearched;
     }
+
+    public void setTimeSearched(int timeSearched) {
+        this.timeSearched = timeSearched;
+    }
+
 
     public int getRow() {
         return row;
